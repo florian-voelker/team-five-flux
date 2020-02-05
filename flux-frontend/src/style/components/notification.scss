@@ -1,0 +1,7 @@
+#ui-wrap > div#notification {
+	position: absolute;
+	right: 0px;
+	background-color: change-color($color: yellow, $alpha: 0.4);
+	cursor: pointer;
+	padding: 0px 10px;
+}

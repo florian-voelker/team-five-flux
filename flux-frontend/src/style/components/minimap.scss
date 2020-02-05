@@ -1,0 +1,11 @@
+#minimap {
+    grid-area: minimap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        max-width: calc(100% - 20px);
+        max-height: calc(100% - 20px);
+    }
+}

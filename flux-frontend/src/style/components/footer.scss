@@ -1,0 +1,13 @@
+#footer {
+  grid-area: footer;
+
+  display: flex;
+  justify-content: flex-end;
+  color: rgb(200, 200, 200);
+
+  padding: 2px 4px;
+
+  > .remarks {
+    font-style: italic;
+  }
+}

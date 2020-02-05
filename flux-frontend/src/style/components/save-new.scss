@@ -1,0 +1,97 @@
+#save,
+#load-new {
+  input {
+    &::placeholder {
+      font-style: italic;
+    }
+
+    background-color: #333;
+    border-color: #222;
+    color: white;
+    padding: 6px 10px;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  button {
+    background-color: #333;
+    border-color: #222;
+    color: white;
+    padding: 6px 10px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+    }
+  }
+}
+
+#save {
+  padding: 0px 20px;
+  color: white;
+
+  form {
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 40px;
+    // justify-content: space-between;
+
+    label[for="name"] {
+      &::before {
+        content: "Spielstandname";
+      }
+      margin-bottom: 4px;
+    }
+
+    input {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+#load-new {
+  color: white;
+
+  &::before {
+    content: "Spielstände";
+    font-size: 4em;
+    font-weight: bolder;
+  }
+
+  .create-new {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .savegames {
+    &:empty {
+      &::before {
+        content: "Es sind noch keine Spielstände vorhanden.";
+        font-style: italic;
+        margin-bottom: 10px;
+      }
+    }
+
+    display: flex;
+
+    .savegame {
+      margin: 30px;
+      padding: 20px;
+
+      background-color: #151515;
+
+      border: 1px solid #111;
+
+      .name {
+        display: block;
+        font-size: 1.3em;
+        margin-bottom: 6px;
+      }
+
+      .savetime {
+        display: block;
+        margin-bottom: 6px;
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+// #ui-wrap[data-type="login+register"] {
+#login-register {
+  button,
+  input,
+  optgroup,
+  select,
+  textarea,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"],
+  button[disabled],
+  input[disabled],
+  button::-moz-focus-inner,
+  input::-moz-focus-inner,
+  input[type="checkbox"],
+  input[type="radio"],
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="search"],
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration {
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  color: white;
+  display: flex;
+
+  .register-wrapper {
+    padding-right: 60px;
+    border-right: 4px solid #555;
+  }
+
+  .login-wrapper {
+    padding-left: 60px;
+  }
+
+  > * {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .reason {
+      text-align: center;
+      height: 2em;
+    }
+
+    .login-state,
+    .register-state {
+      transition: color 200ms;
+
+      margin-top: 20px;
+      text-align: center;
+      height: 2em;
+      &.successful {
+        color: green;
+
+        &::before {
+          content: "Erfolgreich!";
+        }
+      }
+
+      &.failed {
+        color: red;
+
+        &::before {
+          content: "Fehlgeschlagen!";
+        }
+      }
+
+      &.loading {
+        color: yellow;
+
+        &::before {
+          content: "Laden";
+        }
+      }
+    }
+
+    > form {
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+
+      input,
+      button {
+        background-color: #333333;
+        padding: 4px 7px;
+        border: 1px solid #222;
+        color: white;
+      }
+
+      button {
+        cursor: pointer;
+        font-weight: bolder;
+      }
+
+      label {
+        margin-bottom: 4px;
+      }
+
+      & > :nth-child(2n + 1) {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+// }
